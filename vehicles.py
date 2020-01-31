@@ -6,6 +6,10 @@ class Car():
     def run_car(self):
         print("This " + self.car_model + " is going " + str(self.car_speed) + " miles per hour. Watch out!" )
 
+    def __str__(self):
+        string_object = "Attributes of this class include car_model: " + self.car_model + " and car_speed: " + self.car_speed
+        return string_object
+
 
 class ElectricCar(Car):
     def __init__(self, car_make, car_speed, electric_type ):
@@ -18,6 +22,7 @@ class ElectricCar(Car):
 if __name__ == '__main__':
     ford = Car("Ford 150", "95")
     ford.run_car()
+    print(ford)
 
     prius = ElectricCar("Prius", "80", "hybrid")
     prius.run_car()
