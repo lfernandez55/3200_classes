@@ -23,6 +23,8 @@ if __name__ == '__main__':
     ford = Car("Ford 150", "95")
     ford.run_car()
     print(ford)
+    ford.car_speed="444"
+    print(ford)
 
     prius = ElectricCar("Prius", "80", "hybrid")
     prius.run_car()
